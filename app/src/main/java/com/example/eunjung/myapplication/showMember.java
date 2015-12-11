@@ -24,6 +24,7 @@ import java.net.URLEncoder;
 public class showMember extends AppCompatActivity {
 
     private TextView evGroupName;
+
     private ArrayAdapter arrayAdapter;
     private ListView lvGroupMember;
 
