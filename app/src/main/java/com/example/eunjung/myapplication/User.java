@@ -9,10 +9,10 @@ import java.util.Date;
 import java.util.Locale;
 public class User implements Serializable{
 
-     public static final String USER_TABLE_NAME = "User", USER_ID = "userID"
-             , USER_NAME = "userName", NIC_NAME = "nicName"
-             , PASSWORD = "password"
-             , PHONE = "phoneNumber", EMAIL = "Email";
+    public static final String USER_TABLE_NAME = "User", USER_ID = "userID"
+            , USER_NAME = "userName", NIC_NAME = "nicName"
+            , PASSWORD = "password"
+            , PHONE = "phoneNumber", EMAIL = "Email";
     String userID;
     String userName, nicName;
     String password;

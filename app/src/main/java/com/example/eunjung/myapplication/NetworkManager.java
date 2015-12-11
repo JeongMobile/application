@@ -1,28 +1,20 @@
 package com.example.eunjung.myapplication;
 
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
 
-public class addLists extends AppCompatActivity {
+/**
+ * Created by Sangwon on 2015-12-11.
+ */
+public class NetworkManager {
+    public static final String ServerIP = "165.194.33.149";
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_lists);
-    }
     public class JSONTask extends AsyncTask<String, String, String> {
 
         @Override

@@ -37,7 +37,7 @@ public class showMember extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_member);
 
-        String urlString = "http://165.194.33.149:8899/Login/";
+        String urlString = "http://"+NetworkManager.ServerIP+":8899/Login/";
         try {
             //urlString += groupID + "/" + URLEncoder.encode(userID, "UTF-8");
 

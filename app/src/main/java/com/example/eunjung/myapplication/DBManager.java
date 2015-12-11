@@ -50,7 +50,7 @@ public class DBManager {
                     +TodoLists.IMPROTANCE+" integer , "                         //4
                     +TodoLists.DETAIL_CONTENTS+" text , "                       //5
                     +TodoLists.STATE+" integer);"                              //6
-                    );                           //7
+            );                           //7
         }
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

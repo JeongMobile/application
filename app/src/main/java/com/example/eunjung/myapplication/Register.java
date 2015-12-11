@@ -1,6 +1,7 @@
 package com.example.eunjung.myapplication;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -63,7 +64,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                         etPassword.getText().toString().trim(),
                         etPhone.getText().toString().trim(),
                         etEmail.getText().toString().trim()
-                        );
+                );
                 checkPassword = etCheckPassword.getText().toString().trim();
                 if(user.userID.equals("") || user.userName.equals("") || user.password.equals("") || user.nicName.equals("") || user.phoneNumber.equals("") || user.Email.equals("")){
                     Toast.makeText(getApplicationContext(), "데이터를 다 넣어 주세요!.", Toast.LENGTH_LONG).show();
@@ -74,7 +75,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                     return;
                 }
 
-                String urlString = "http://165.194.33.149:8899/User";
+                String urlString = "http://"+NetworkManager.ServerIP+":8899/User";
                 new JSONTask().execute(urlString);
 
                 break;
@@ -135,6 +136,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                 Toast.makeText(getApplicationContext(), "계정 만들기 성공!.", Toast.LENGTH_LONG).show();
                 Log.d("Register","success");
                 Register.this.finish();
+                return;
             }
             try {
                 JSONArray jsonArray = new JSONArray(result);
@@ -143,13 +145,24 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                     JSONObject json = jsonArray.getJSONObject(i);
                     String module = json.getString("userID");
                     Log.d("Register",module);
-                    if(user.userID.equals(module)){
+                    if(user.userID.equals(module)) {
                         Toast.makeText(getApplicationContext(), "같은 아이디가 존재합니다..", Toast.LENGTH_SHORT).show();
                         return;
                     }
                 }
-                Log.d("Register","True");
 
+                Log.d("Register", "True");
+                JSONObject temp = new JSONObject();
+                temp.put("userID",URLEncoder.encode(user.userID, "UTF-8"));
+                temp.put("Email",URLEncoder.encode(user.Email, "UTF-8"));
+                temp.put("nicName",URLEncoder.encode(user.nicName, "UTF-8"));
+                temp.put("password",URLEncoder.encode(user.password, "UTF-8"));
+                temp.put("phoneNumber",URLEncoder.encode(user.phoneNumber, "UTF-8"));
+                temp.put("userName",URLEncoder.encode(user.userName, "UTF-8"));
+
+
+                String url ="http://"+NetworkManager.ServerIP+":8899/InsertUser/?data="+temp.toString();
+                new JSONTask().execute(url);
             }catch (Exception e){
                 e.printStackTrace();
             }

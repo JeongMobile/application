@@ -33,7 +33,7 @@ public class Test extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        String urlString = "http://165.194.33.149:8899/User";
+        String urlString = "http://"+NetworkManager.ServerIP+":8899/User";
         new JSONTask().execute(urlString);
 
     }

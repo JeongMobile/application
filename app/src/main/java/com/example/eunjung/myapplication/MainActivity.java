@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 userID = etUserID.getText().toString();
                 password = etPassword.getText().toString();
 
-                String urlString = "http://165.194.33.149:8899/Login/";
+                String urlString = "http://"+NetworkManager.ServerIP+":8899/Login/";
                 try {
                     urlString += URLEncoder.encode(userID, "UTF-8") + "/" + URLEncoder.encode(password, "UTF-8");
 

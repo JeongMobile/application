@@ -40,7 +40,7 @@ public class SplashActivity extends Activity {
 
             //SQLiteDatabase db = infoDBmanager.getReadableDatabase();
             if(user != null) {
-                String urlString = "http://165.194.33.149:8899/Login/";
+                String urlString = "http://"+NetworkManager.ServerIP+":8899/Login/";
                 urlString += user.userID + "/" + user.password;
                 new JSONTask().execute(urlString);
             }
