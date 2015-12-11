@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#7ED2FF"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <GridLayout
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="일정 내용"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="297dp"
+        android:layout_margin="10dp"
+        android:background="#FFFFFF"
+        android:layout_height="37dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="기간"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="299dp"
+        android:inputType="textPassword"
+        android:layout_margin="10dp"
+        android:background="#FFFFFF"
+        android:layout_height="37dp" />
+    </GridLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="395dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="79dp"
+            android:text="중요도"
+            android:layout_height="54dp" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:layout_below="@+id/textView"
+            android:layout_alignRight="@+id/textView"
+            android:layout_alignEnd="@+id/textView" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="세부내용"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        android:layout_weight="0.11">
+
+    <EditText
+        android:id="@+id/etDetailtodo"
+        android:layout_width="match_parent"
+        android:inputType="textPassword"
+        android:lines="6"
+        android:layout_margin="10dp"
+        android:background="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.88" />
+
+    </ScrollView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bCancelAdd"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="#1245AB" />
+
+        <Button
+            android:id="@+id/bEnrol"
+            android:text="enroll"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:background="#1245AB" />
+
+    </LinearLayout>
+</LinearLayout>

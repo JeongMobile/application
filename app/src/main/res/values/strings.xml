@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_todo_lists">TodoLists</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_show_todo_lists">showTodoLists</string>
+    <string name="title_activity_test">Test</string>
+    <string name="title_activity_detail_todo">DetailTodo</string>
+</resources>

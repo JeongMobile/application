@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#7ED2FF"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="348dp"
+        android:layout_height="39dp"
+        android:layout_margin="15dp"
+        android:background="#ffffff"
+        android:hint="그룹이름"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/etGroupname"/>
+
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+        <EditText
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:text="그룹 설명"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/etGrouptip"
+            android:lines="6"
+            android:layout_height="match_parent" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_margin="10dp"
+        android:background="#ffffff"
+        android:hint="사람 이름"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/etFindUser"
+        android:layout_weight="0.91" />
+
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:layout_margin="10dp"
+        android:id="@+id/button2"
+        android:layout_alignTop="@+id/SCROLLER"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/SCROLLER"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scrollbars="vertical"
+            android:fillViewport="true">
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/lvGroupMember"
+                android:layout_margin="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </ScrollView>
+
+</LinearLayout>
+

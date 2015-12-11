@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:divider="#23222A"
+        android:dividerHeight="1dp"
+        android:background="#FFE868"
+        android:id="@+id/drawer"/>
+
+</menu>
